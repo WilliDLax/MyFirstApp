@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue headphones" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-gC-a2y">
+                                <rect key="frame" x="105.5" y="431.5" width="203" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qY-Ql-OHc">
+                                <rect key="frame" x="133" y="484.5" width="148.5" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Change!"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Yellow headphones"/>
+                                <connections>
+                                    <action selector="myDummyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TU0-Np-Lj0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headphone2" translatesAutoresizingMaskIntoConstraints="NO" id="L6Z-MQ-uNK">
+                                <rect key="frame" x="57" y="181.5" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="CK2-HP-yUk"/>
+                                    <constraint firstAttribute="height" constant="200" id="UiZ-Fy-YCm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B3O-gC-a2y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Bb-xE-1Zb"/>
+                            <constraint firstItem="5qY-Ql-OHc" firstAttribute="top" secondItem="B3O-gC-a2y" secondAttribute="bottom" constant="20" id="Lur-nZ-I3g"/>
+                            <constraint firstItem="5qY-Ql-OHc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lvt-dt-1R5"/>
+                            <constraint firstItem="L6Z-MQ-uNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ViX-fg-6rh"/>
+                            <constraint firstItem="B3O-gC-a2y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="veO-DY-BP6"/>
+                            <constraint firstItem="B3O-gC-a2y" firstAttribute="top" secondItem="L6Z-MQ-uNK" secondAttribute="bottom" constant="50" id="y6L-Kt-hYN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyButtonOutlet" destination="5qY-Ql-OHc" id="fL5-jj-LXZ"/>
+                        <outlet property="myFirstText" destination="B3O-gC-a2y" id="H6y-II-Obc"/>
+                        <outlet property="myImage" destination="L6Z-MQ-uNK" id="hrK-jb-KeN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="headphone2" width="5760" height="4320"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
